@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+    <ImageView
+        android:id="@+id/logoBanco"
+        android:layout_width="127dp"
+        android:layout_height="144dp"
+        android:layout_marginTop="112dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/logobanco"
+        android:contentDescription="Logo de Banco" />
+
+    <TextView
+        android:id="@+id/textoLogo"
+        android:layout_width="111dp"
+        android:layout_height="40dp"
+        android:layout_marginTop="16dp"
+        android:text="IplaBank"
+        android:textAlignment="center"
+        android:textSize="18sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/logoBanco" />
+
+    <EditText
+        android:id="@+id/etUsuario"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:ems="10"
+        android:hint="usuario"
+        android:paddingStart="10dp"
+        android:inputType="text"
+        android:background="@color/fondoEditText"
+        android:minHeight="48dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textoLogo" />
+
+    <EditText
+        android:id="@+id/etContrasena"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="1dp"
+        android:background="@color/fondoEditText"
+        android:ems="10"
+        android:hint="contraseña"
+        android:inputType="textPassword"
+        android:minHeight="48dp"
+        android:paddingStart="10dp"
+        app:layout_constraintStart_toStartOf="@+id/etUsuario"
+        app:layout_constraintTop_toBottomOf="@+id/etUsuario" />
+
+    <Button
+        android:id="@+id/btnIngresar"
+        android:layout_width="180dp"
+        android:layout_height="48dp"
+        android:layout_marginTop="16dp"
+        android:backgroundTint="#4B9F18"
+        android:text="Ingresar"
+        app:layout_constraintEnd_toEndOf="@+id/etContrasena"
+        app:layout_constraintStart_toStartOf="@+id/etContrasena"
+        app:layout_constraintTop_toBottomOf="@+id/etContrasena" />
+
+    <Button
+        android:id="@+id/btnSolicitarNuevaCuenta"
+        android:layout_width="180dp"
+        android:layout_height="48dp"
+        android:backgroundTint="#4B9F18"
+        android:text="Solicitar Cuenta"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="@+id/btnIngresar"
+        app:layout_constraintStart_toStartOf="@+id/btnIngresar"
+        app:layout_constraintTop_toBottomOf="@+id/btnIngresar"
+        app:layout_constraintVertical_bias="0.0" />
+</androidx.constraintlayout.widget.ConstraintLayout>

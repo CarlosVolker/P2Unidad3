@@ -1,0 +1,148 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".SolicitudCuentaActivity">
+
+    <TextView
+        android:id="@+id/tituloSolicitudCuenta"
+        android:layout_width="191dp"
+        android:layout_height="46dp"
+        android:layout_marginTop="80dp"
+        android:text="Solicitud Cuenta"
+        android:textAlignment="center"
+        android:textSize="20sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <EditText
+        android:id="@+id/etNombreCompleto"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="24dp"
+        android:background="@color/fondoEditText"
+        android:backgroundTintMode="add"
+        android:ems="10"
+        android:hint="Nombre Completo"
+        android:paddingStart="10dp"
+        android:inputType="text"
+        android:minHeight="48dp"
+        app:layout_constraintEnd_toEndOf="@+id/tituloSolicitudCuenta"
+        app:layout_constraintStart_toStartOf="@+id/tituloSolicitudCuenta"
+        app:layout_constraintTop_toBottomOf="@+id/tituloSolicitudCuenta" />
+
+    <EditText
+        android:id="@+id/etRut"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="1dp"
+        android:background="@color/fondoEditText"
+        android:backgroundTintMode="add"
+        android:ems="10"
+        android:hint="Rut"
+        android:paddingStart="10dp"
+        android:inputType="text"
+        android:minHeight="48dp"
+        app:layout_constraintEnd_toEndOf="@+id/etNombreCompleto"
+        app:layout_constraintStart_toStartOf="@+id/etNombreCompleto"
+        app:layout_constraintTop_toBottomOf="@+id/etNombreCompleto" />
+
+    <EditText
+        android:id="@+id/etFechaNacimiento"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="1dp"
+        android:background="@color/fondoEditText"
+        android:backgroundTintMode="add"
+        android:ems="10"
+        android:hint="Fecha Nacimiento"
+        android:paddingStart="10dp"
+        android:inputType="date"
+        android:minHeight="48dp"
+        app:layout_constraintEnd_toEndOf="@+id/etRut"
+        app:layout_constraintStart_toStartOf="@+id/etRut"
+        app:layout_constraintTop_toBottomOf="@+id/etRut" />
+
+    <EditText
+        android:id="@+id/etEmail"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="1dp"
+        android:background="@color/fondoEditText"
+        android:backgroundTintMode="add"
+        android:ems="10"
+        android:hint="Email"
+        android:paddingStart="10dp"
+        android:inputType="textEmailAddress"
+        android:minHeight="48dp"
+        app:layout_constraintEnd_toEndOf="@+id/etFechaNacimiento"
+        app:layout_constraintStart_toStartOf="@+id/etFechaNacimiento"
+        app:layout_constraintTop_toBottomOf="@+id/etFechaNacimiento" />
+
+    <EditText
+        android:id="@+id/etTelefono"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="1dp"
+        android:background="@color/fondoEditText"
+        android:backgroundTintMode="add"
+        android:ems="10"
+        android:hint="Teléfono"
+        android:paddingStart="10dp"
+        android:inputType="phone"
+        android:minHeight="48dp"
+        app:layout_constraintEnd_toEndOf="@+id/etEmail"
+        app:layout_constraintStart_toStartOf="@+id/etEmail"
+        app:layout_constraintTop_toBottomOf="@+id/etEmail" />
+
+    <Button
+        android:id="@+id/btnFotoFrontalCedula"
+        android:layout_width="200dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="24dp"
+        android:backgroundTint="#4B9F18"
+        android:drawableLeft="@android:drawable/ic_menu_camera"
+        android:text="Cédula Frontal"
+        app:layout_constraintEnd_toEndOf="@+id/etTelefono"
+        app:layout_constraintStart_toStartOf="@+id/etTelefono"
+        app:layout_constraintTop_toBottomOf="@+id/etTelefono" />
+
+    <Button
+        android:id="@+id/btnFotoTraseraCedula"
+        android:layout_width="200dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:backgroundTint="#4B9F18"
+        android:drawableLeft="@android:drawable/ic_menu_camera"
+        android:text="Cédula Trasera"
+        app:layout_constraintEnd_toEndOf="@+id/btnFotoFrontalCedula"
+        app:layout_constraintStart_toStartOf="@+id/btnFotoFrontalCedula"
+        app:layout_constraintTop_toBottomOf="@+id/btnFotoFrontalCedula" />
+
+    <Button
+        android:id="@+id/btnSolicitar"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="32dp"
+        android:backgroundTint="#4B9F18"
+        android:text="SOLICITAR"
+        app:layout_constraintEnd_toEndOf="@+id/btnFotoTraseraCedula"
+        app:layout_constraintStart_toStartOf="@+id/btnFotoTraseraCedula"
+        app:layout_constraintTop_toBottomOf="@+id/btnFotoTraseraCedula" />
+
+    <TextView
+        android:id="@+id/tvMensaje"
+        android:layout_width="268dp"
+        android:layout_height="24dp"
+        android:layout_marginTop="16dp"
+        android:text=""
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.045"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
